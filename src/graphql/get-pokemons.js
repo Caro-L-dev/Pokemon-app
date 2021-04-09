@@ -8,7 +8,12 @@ query pokemons($first: Int!) {
         image
         maxHP
         maxCP
-        attacks
+        attacks {
+            special {
+                name
+                damage
+            }
+        }
     }
 }
 `
