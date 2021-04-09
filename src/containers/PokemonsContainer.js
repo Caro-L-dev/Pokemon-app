@@ -7,11 +7,11 @@ import { Pokemon } from '../components/Pokemon';
 
 export function PokemonsContainer() {
     const { data: {pokemons = []} = {}} = useQuery(GET_POKEMONS, {
-        variables: { first: 9},
+        variables: { first: 151},
     });
 
     return (
-        <div className="pokemons">
+        <div className="container">
             {pokemons && pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
         </div>
     )
